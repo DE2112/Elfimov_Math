@@ -1,0 +1,12 @@
+C:\Users\user\RiderProjects\ElfimovMath\ElfimovMath\bin\Debug\net5.0\ElfimovMath.deps.json
+C:\Users\user\RiderProjects\ElfimovMath\ElfimovMath\bin\Debug\net5.0\ElfimovMath.dll
+C:\Users\user\RiderProjects\ElfimovMath\ElfimovMath\bin\Debug\net5.0\ref\ElfimovMath.dll
+C:\Users\user\RiderProjects\ElfimovMath\ElfimovMath\bin\Debug\net5.0\ElfimovMath.pdb
+C:\Users\user\RiderProjects\ElfimovMath\ElfimovMath\obj\Debug\net5.0\ElfimovMath.csproj.AssemblyReference.cache
+C:\Users\user\RiderProjects\ElfimovMath\ElfimovMath\obj\Debug\net5.0\ElfimovMath.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\RiderProjects\ElfimovMath\ElfimovMath\obj\Debug\net5.0\ElfimovMath.AssemblyInfoInputs.cache
+C:\Users\user\RiderProjects\ElfimovMath\ElfimovMath\obj\Debug\net5.0\ElfimovMath.AssemblyInfo.cs
+C:\Users\user\RiderProjects\ElfimovMath\ElfimovMath\obj\Debug\net5.0\ElfimovMath.csproj.CoreCompileInputs.cache
+C:\Users\user\RiderProjects\ElfimovMath\ElfimovMath\obj\Debug\net5.0\ElfimovMath.dll
+C:\Users\user\RiderProjects\ElfimovMath\ElfimovMath\obj\Debug\net5.0\ref\ElfimovMath.dll
+C:\Users\user\RiderProjects\ElfimovMath\ElfimovMath\obj\Debug\net5.0\ElfimovMath.pdb
