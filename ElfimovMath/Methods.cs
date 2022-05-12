@@ -172,7 +172,6 @@ namespace ElfimovMath
                 if (InverseH.IsPositive())
                 {
                     d = -InverseH * grad;
-                    x = prevX + d;
                 }
                 else
                 {
