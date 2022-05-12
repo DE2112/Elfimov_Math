@@ -65,6 +65,42 @@ namespace ElfimovMath
 
             return x;
         }
+        
+        public static Vector FastGradientDescent(Func<Vector, double> f, Vector x0, double eps1, double eps2, double M, out int k)
+        {
+            Vector grad = f.Gradient(x0);
+            var x = x0.Clone();
+            var prevX = x.Clone();
+
+            k = 0;
+            var isMatching = false;
+            while (grad.Norm > eps1 && k < M)
+            {
+                grad = f.Gradient(x);
+
+                var tk = Round(UniformSearch(t => f(prevX - t * grad), 0d, 1d, eps1), 4);
+                x = prevX - tk * grad;
+
+                if ((x - prevX).Norm < eps2 && Abs(f(x) - f(prevX)) < eps2)
+                {
+                    if (isMatching)
+                    {
+                        return x;
+                    }
+
+                    isMatching = true;
+                }
+                else
+                {
+                    isMatching = false;
+                }
+                
+                prevX = x.Clone();
+                k++;
+            }
+
+            return x;
+        }
 
         public static Vector FletcherReeves(Func<Vector, double> f, Vector x0, double eps1, double eps2, int M,
             double t0, out int k)
