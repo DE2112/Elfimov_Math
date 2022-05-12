@@ -127,12 +127,8 @@ namespace ElfimovMath
                     d = -grad;
                 }
         
-                var t = t0;
-                do
-                {
-                    x = prevX + t * d;
-                    t /= 2;
-                } while (f(x) - f(prevX) > 0d);
+                var tk = Round(UniformSearch(t => f(prevX + t * d), 0d, 1d, eps1), 4);
+                x = prevX + tk * d;
         
                 if ((x - prevX).Norm < eps2 && Abs(f(x) - f(prevX)) < eps2)
                 {
