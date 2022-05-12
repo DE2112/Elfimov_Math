@@ -184,6 +184,21 @@ namespace ElfimovMath
             return minor;
         }
 
+        public Matrix PrincipalMinor(int size)
+        {
+            var elements = new double[size, size];
+
+            for (int i = 0; i < size; i++)
+            {
+                for (int j = 0; j < size; j++)
+                {
+                    elements[i, j] = this[i, j];
+                }
+            }
+
+            return new Matrix(elements);
+        }
+
         public static double Determinent(Matrix matrix)
         {
             var det = 0d;
@@ -205,7 +220,7 @@ namespace ElfimovMath
         public Matrix Inverse()
         {
             var det = Matrix.Determinent(this);
-            if (Math.Abs(det) > 0.0001d) 
+            if (Math.Abs(det) != 0d) 
             {
                 return Adjoint() / det;
             }
@@ -239,6 +254,16 @@ namespace ElfimovMath
                 }
             }
             return transposeMatrix;
+        }
+
+        public bool IsPositive()
+        {
+            for (int i = 1; i <= this.Size; i++)
+            {
+                if (Determinent(this.PrincipalMinor(i)) < 0d) return false;
+            }
+            
+            return true;
         }
 
         public override string ToString()
